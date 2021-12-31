@@ -36,7 +36,7 @@ def insert(json, timestamp):
                             )
 
 def lambda_handler(event, context):
-    all_current_prices = requests.get("https://api.coinmarketcap.com/v1/ticker/?limit=200").json()
+    all_current_prices = requests.get("https://api.coinmarketcap.com/v1/ticker/?limit=8000").json()
     timestamp = calendar.timegm(time.gmtime())
     counter = 0
 
